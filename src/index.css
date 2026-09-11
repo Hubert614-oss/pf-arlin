@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+
+/* Grid background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background-image: radial-gradient(
+    #d4d4d8 1px,
+    transparent 1px
+  );
+
+  background-size: 16px 16px;
+
+  opacity: 0.65;
+}
