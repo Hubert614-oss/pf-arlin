@@ -6,8 +6,8 @@ export function BorderIntersections() {
 
     return (
         <>
-            <AiOutlineDrag aria-hidden="true" className={`${markerClassName} bottom-0 left-0 h-4 w-4 z-70`} />
-            <AiOutlineDrag aria-hidden="true" className={`${markerClassName} bottom-0 right-0 translate-x-1/2 h-4 w-4 z-70`} />
+            <AiOutlineDrag aria-hidden="true" className={`${markerClassName} bottom-0 left-0 h-4 w-4 z-40`} />
+            <AiOutlineDrag aria-hidden="true" className={`${markerClassName} bottom-0 right-0 translate-x-1/2 h-4 w-4 z-40`} />
         </>
     );
 }
@@ -31,14 +31,14 @@ export function Section({
         scroll-mt-20
         border-b
         border-[#596643]
-        border-dashed
+        border-dotted
         ${className}
       `}
         >
-            <div className="relative mx-auto min-h-screen max-w-7xl border-x border-[#596643] border-dashed px-4 sm:px-6 lg:px-10">
-                <BorderIntersections />
-                <div className="relative mx-auto min-h-screen border-x border-[#596643] border-dashed">
-                    <BorderIntersections />
+            <div className="relative mx-auto min-h-screen max-w-[99%] sm:w-[98%] md:w-[98%] lg:w-[80%] border-x border-[#596643] border-dotted px-4 sm:px-6 lg:px-10">
+                {/* <BorderIntersections /> */}
+                <div className="relative mx-auto min-h-screen border-x border-[#596643] border-dotted">
+                    {/* <BorderIntersections /> */}
                     {children}
                 </div>
             </div>
