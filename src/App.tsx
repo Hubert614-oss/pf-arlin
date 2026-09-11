@@ -12,7 +12,7 @@ import { Contact } from "./sections/Contact";
 function App() {
 
   return (
-    <div className="h-screen w-scree text-zinc-900">
+    <div className="min-h-screen w-screen text-zinc-900">
 
       <Header />
 
