@@ -2,7 +2,7 @@ import { Section } from "../components/Section";
 
 export function Home() {
   return (
-    <Section id="home">
+    <Section id="home" className="">
       <div className="flex min-h-screen items-start px-2 py-24 sm:px-6">
         
         <div className="w-full">
