@@ -6,6 +6,8 @@ export function BorderIntersections() {
 
     return (
         <>
+            <span aria-hidden="true" className="border-light border-light-left" />
+            <span aria-hidden="true" className="border-light border-light-right" />
             <AiOutlineDrag aria-hidden="true" className={`${markerClassName} bottom-0 left-0 h-4 w-4 z-40`} />
             <AiOutlineDrag aria-hidden="true" className={`${markerClassName} bottom-0 right-0 translate-x-1/2 h-4 w-4 z-40`} />
         </>

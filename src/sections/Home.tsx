@@ -1,12 +1,13 @@
 import { Section } from "../components/Section";
-
 export function Home() {
+
+
   return (
     <Section id="home" className="">
       <div className="flex min-h-screen items-start px-2 py-24 sm:px-6">
-        
+
         <div className="w-full">
-          
+
           <p className="mb-4 font-mono text-sm text-zinc-500">
             Hello, I'm
           </p>
@@ -26,7 +27,7 @@ export function Home() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            
+
             <a
               href="#projects"
               className="
@@ -67,5 +68,6 @@ export function Home() {
 
       </div>
     </Section>
+
   );
 }

@@ -12,10 +12,10 @@ export function Header() {
 
   return (
     <>
-      <div className="h-9 w-full border-b border-[#596643] border-dotted dark:border-zinc-700">
+      <div className="h-9 w-full border-b border-[#596643] border-dotted dark:border-slate-800">
         <div className="h-full">
 
-          <div className="relative mx-auto max-w-[99%] sm:w-[98%] md:w-[98%] lg:w-[80%] px-4 sm:px-6 lg:px-10 h-full border-x border-[#596643] border-dotted dark:border-zinc-700">
+          <div className="relative mx-auto max-w-[99%] sm:w-[98%] md:w-[98%] lg:w-[80%] px-4 sm:px-6 lg:px-10 h-full border-x border-[#596643] border-dotted dark:border-[#596643]">
             <div className="relative mx-auto bg-[#D9FF57] text-green-950 h-full border-x border-[#596643] border-dotted dark:border-zinc-700 flex items-center px-2 gap-5">
               <h5 className="font-extrabold text-sm">DEVELOPPER</h5>
               <h5 className="font-extrabold text-sm">WEB</h5>

@@ -21,6 +21,50 @@ html.dark body {
   background: #09090b;
 }
 
+.border-light {
+  position: absolute;
+  top: 0;
+  z-index: 30;
+  width: 2px;
+  height: 4px;
+  border-radius: 999px;
+  background: #d9ff57;
+  box-shadow: 0 0 7px 2px rgb(217 255 87 / 75%);
+  animation: border-light-move 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.border-light-left {
+  left: -2px;
+}
+
+.border-light-right {
+  right: -2px;
+  animation-delay: 4s;
+}
+
+html.dark .border-light {
+  background: #f4ff9a;
+  box-shadow: 0 0 8px 2px rgb(244 255 154 / 80%);
+}
+
+@keyframes border-light-move {
+  0%,
+  100% {
+    top: 0;
+  }
+
+  50% {
+    top: calc(100% - 12px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .border-light {
+    animation: none;
+  }
+}
+
 /* Grid background */
 body::before {
   content: "";
