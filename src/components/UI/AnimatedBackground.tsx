@@ -256,7 +256,7 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
   return (
     <div
       ref={containerRef}
-      className={`relative w-full min-h-screen overflow-hidden ${bgClass} ${className}`}
+      className={`relative w-full min-h-screen overflow-x-clip ${bgClass} ${className}`}
     >
       {/* === RÉSEAU CANVAS (NOUVEAU) === */}
       {showNetwork && (
