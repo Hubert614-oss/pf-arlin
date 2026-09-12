@@ -107,8 +107,8 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
           if (dist < connectionDistance) {
             const opacity = (1 - dist / connectionDistance) * 0.5;
             ctx.strokeStyle = isDark
-              ? `rgba(56, 189, 248, ${opacity})` // cyan-400
-              : `rgba(59, 130, 246, ${opacity})`; // blue-500
+              ? `rgba(173, 255, 47, ${opacity})` // greenYellow
+              : `rgba(34, 139, 34, ${opacity})`; // forest green
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
@@ -124,8 +124,8 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
         if (mouseDist < mouseConnectionDistance) {
           const opacity = (1 - mouseDist / mouseConnectionDistance) * 0.8;
           ctx.strokeStyle = isDark
-            ? `rgba(99, 102, 241, ${opacity})` // indigo
-            : `rgba(79, 70, 229, ${opacity})`;
+            ? `rgba(173, 255, 47, ${opacity})` // greenYellow
+            : `rgba(0, 100, 0, ${opacity})`; // dark green
           ctx.lineWidth = 1.2;
           ctx.beginPath();
           ctx.moveTo(nodes[i].x, nodes[i].y);
@@ -152,11 +152,11 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
 
         // Glow
         ctx.shadowBlur = isDark ? 15 : 8;
-        ctx.shadowColor = isDark ? 'rgba(56, 189, 248, 0.8)' : 'rgba(59, 130, 246, 0.6)';
+        ctx.shadowColor = isDark ? 'rgba(173, 255, 47, 0.8)' : 'rgba(0, 100, 0, 0.6)';
         
         ctx.fillStyle = isDark
-          ? 'rgba(186, 230, 253, 0.9)' // sky-200
-          : 'rgba(37, 99, 235, 0.9)';  // blue-600
+          ? 'rgba(173, 255, 47, 0.9)' // greenYellow
+          : 'rgba(0, 100, 0, 0.9)';  // dark green
         
         ctx.beginPath();
         ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
@@ -219,11 +219,11 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
   // Génération aléatoire des orbes (stable au render)
   const orbs = useMemo(() => {
     const colors = [
-      'rgba(99,102,241,0.4)',   // indigo
-      'rgba(236,72,153,0.3)',   // pink
-      'rgba(34,211,238,0.25)',  // cyan
-      'rgba(168,85,247,0.3)',   // purple
-      'rgba(251,146,60,0.25)',  // orange
+      'rgba(173,255,47,0.4)',    // greenYellow
+      'rgba(50,205,50,0.3)',     // lime green
+      'rgba(124,252,0,0.25)',    // lawn green
+      'rgba(0,100,0,0.3)',       // dark green
+      'rgba(34,139,34,0.25)',    // forest green
     ];
     return Array.from({ length: orbCount }, (_, i) => ({
       id: i,
@@ -248,7 +248,7 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
   }, [dotCount]);
 
   const bgClass = isDark
-    ? 'bg-[#020617]' // slate-950 plus profond pour matcher la capture
+    ? 'bg-[#031a0b]' // dark green
     : 'bg-gray-50';
 
   const textClass = isDark ? 'text-white' : 'text-gray-900';
@@ -330,8 +330,8 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
           width: 300,
           height: 300,
           background: isDark
-            ? 'radial-gradient(circle, rgba(99,102,241,0.15), transparent 70%)'
-            : 'radial-gradient(circle, rgba(99,102,241,0.08), transparent 70%)',
+            ? 'radial-gradient(circle, rgba(173,255,47,0.15), transparent 70%)'
+            : 'radial-gradient(circle, rgba(0,100,0,0.08), transparent 70%)',
           transform: 'translate(-50%, -50%)',
           opacity: 0,
           zIndex: 10,

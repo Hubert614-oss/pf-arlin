@@ -29,7 +29,7 @@ export function Header() {
         <div className="h-full">
 
           <div className="relative mx-auto max-w-[99%] sm:w-[98%] md:w-[98%] lg:w-[80%] px-4 sm:px-6 lg:px-10  h-full border-x border-[#596643] border-dotted dark:border-zinc-700">
-            <div className="relative mx-auto h-full bg-slate-200 dark:bg-black border-x border-[#596643] border-dotted dark:border-zinc-700 flex items-center justify-between px-3">
+            <div className="relative mx-auto h-full bg-slate-400 dark:bg-black border-x border-[#596643] border-dotted dark:border-zinc-700 flex items-center justify-between px-3">
               <div className="flex items-center font-bold">
                 <span>{'<'}</span> <FaDev size={26} className="animate-bounce" /> <span>{'>'}</span>
               </div>
