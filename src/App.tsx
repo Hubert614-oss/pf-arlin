@@ -7,7 +7,6 @@ import { Skills } from "./sections/Skills";
 import { Projects } from "./sections/Projects";
 import { Contact } from "./sections/Contact";
 import { useThemeStore } from './stores/themeStore';
-import AnimatedBackground from './components/UI/AnimatedBackground';
 
 
 
@@ -19,15 +18,13 @@ function App() {
 
     <div className="min-h-screen w-screen text-zinc-900 dark:text-zinc-100 ">
       <Header />
-
-      
-        <main>
-          <Home />
-          <About />
-          <Skills />
-          <Projects />
-          <Contact />
-        </main>
+      <main>
+        <Home />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
 
     </div>
   );
