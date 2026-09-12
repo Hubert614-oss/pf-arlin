@@ -36,9 +36,9 @@ export function Section({
       `}
         >
             <div className="relative mx-auto min-h-screen max-w-[99%] sm:w-[98%] md:w-[98%] lg:w-[80%] border-x border-[#596643] border-dotted px-4 sm:px-6 lg:px-10">
-                {/* <BorderIntersections /> */}
+                <BorderIntersections />
                 <div className="relative mx-auto min-h-screen border-x border-[#596643] border-dotted">
-                    {/* <BorderIntersections /> */}
+                    <BorderIntersections />
                     {children}
                 </div>
             </div>

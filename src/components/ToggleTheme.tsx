@@ -5,9 +5,9 @@ import { useState, useRef, useEffect } from "react";
 const themes: Theme[] = ["light", "dark", "system"];
 
 const themeIcons: Record<Theme, React.ReactNode> = {
-    light: <Sun className="w-5 h-5 text-slate-500" />,
-    dark: <Moon className="w-5 h-5 text-slate-500" />,
-    system: <Monitor className="w-5 h-5 text-slate-500" />,
+    light: <Sun className="w-5 h-5" />,
+    dark: <Moon className="w-5 h-5" />,
+    system: <Monitor className="w-5 h-5" />,
 };
 
 export function ToggleTheme() {
@@ -30,7 +30,7 @@ export function ToggleTheme() {
         <div className="relative" ref={menuRef}>
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="flex items-center gap-2 px-1 py-1 rounded-full text-gray-900 dark:text-gray-100  transition-colors"
+                className="flex items-center gap-2 px-1 py-1 rounded-lg text-gray-900 dark:text-gray-900  transition-colors bg-[#D9FF57]"
                 aria-label="Select theme"
                 aria-expanded={isOpen}
             >
@@ -38,7 +38,7 @@ export function ToggleTheme() {
             </button>
 
             {isOpen && (
-                <div className="absolute flex right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-full shadow-lg border border-gray-200 dark:border-gray-700 z-50">
+                <div className="absolute flex -right-1 -mt-9 w-48 bg-white dark:bg-gray-800 rounded-full shadow-lg border border-gray-200 dark:border-gray-700 z-50">
                     {themes.map((t) => (
                         <button
                             key={t}
@@ -48,7 +48,7 @@ export function ToggleTheme() {
                             }}
                             className={`w-full flex items-center gap-3 px-4 py-3 text-left text-sm font-medium rounded-full transition-colors `}
                         >
-                            <span className={`flex items-center justify-center w-5 h-5 ${theme === t ? "text-blue-500 animate-pulse" : "text-gray-500"}`}>
+                            <span className={`flex items-center justify-center w-5 h-5 ${theme === t ? "text-[#293504] dark:text-slate-300 animate-pulse" : "text-gray-500 dark:text-slate-300"}`}>
                                 {themeIcons[t]}
                             </span>
                         </button>
